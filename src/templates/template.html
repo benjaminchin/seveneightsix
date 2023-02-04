@@ -4,21 +4,16 @@
 <html lang="en">
     <head>
         <title>EcoWebsite</title>
-        
+        <nav>
+            <a href="{{ url_for('about')}}">About Us</a>
+        </nav>
     </head>
- 
- 
+
     <body>
-        <form action="{{ url_for("get")}}" method="post">
+        <form action="{{ url_for("home")}}" method="post">
             <label for="url">Website URL:</label><br>
             <input type="text" id="url" name="url"><br>
             <input type="submit" value="Submit">
-           
         </form>
-        <form action="About.html">
-            <input type="submit" value="See Your Waste!" />
-        </form>
-        
-
     </body>
 </html>
