@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .header {
+            padding: 60px;
+            text-align: center;
+            font-size: 30px;   
+        }
+    </style>
+
+    <head>
+        <title>EcoWebsite</title>
+        <div class="header">
+            <h><b>CO2 Emissions</b></h>
+        </div>
+        <nav>
+            <a href="{{ url_for('home')}}">Home</a>
+            <a href="{{ url_for('about')}}">About Us</a>
+        </nav>
+    </head>
+    <body style="background-color:	#AFE1AF;">
+        <p style="text-align: center; font-size: 30px; padding-bottom: 40px;">The emissions for the given site are: {{ data }} kilograms of CO2 per month.</p>
+
+        <p style="text-align: center; font-size: 15px; padding-top: 40px;"">
+            This calculation is based on a conversion rate constant sourced <a href="https://observablehq.com/@mrchrisadams/carbon-footprint-of-sending-data-around">here</a>
+        </p>
+
+    </body>
+</html>
