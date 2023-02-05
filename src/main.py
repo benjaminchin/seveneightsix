@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 import requests
 
-EMMISSION_CONST = 0.00086638382
+EMISSION_CONST = 0.00086638382
 
 app = Flask(__name__)
 
@@ -30,7 +30,7 @@ def calculate(url: str, visitors: int) -> int:
     size = len(response.content)
     mb = size/1024/1024
     netdata = mb*float(visitors)
-    return round(EMMISSION_CONST*netdata, 5)
+    return round(EMISSION_CONST*netdata, 5)
 
 
 if __name__ == "__main__":
