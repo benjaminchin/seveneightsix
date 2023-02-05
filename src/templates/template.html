@@ -3,20 +3,34 @@
 
 <html lang="en">
     <head>
+        <style>
+        .header {
+            padding: 60px;
+            text-align: center;
+            font-size: 30px;   
+        }
+
+        input {
+            width: 100%
+        }
+        </style>
+
         <title>EcoWebsite</title>
-        <h><b>CO2 Emissions</b></h>
+        <div class="header">
+            <h><b>CO2 Emissions</b></h>
+        </div>
         <nav>
             <a href="{{ url_for('about')}}">About Us</a>
         </nav>
     </head>
 
-    <body>
-        <form action="{{ url_for("home")}}" method="post">
-            <label for="url">Website URL:</label><br>
-            <input type="text" id="url" name="url"><br>
-            <label for="visitors">Monthly Number of Visitors</label><br>
-            <input type="number" id="visitors" name="visitors"><br>
-            <input type="submit" value="Submit">
-        </form>
+    <body style="background-color:	#AFE1AF;">        
+            <form action="{{ url_for("home")}}" method="post">
+                <label for="url">Website URL:</label><br>
+                <input type="text" id="url" name="url"><br>
+                <label for="visitors">Monthly Number of Visitors</label><br>
+                <input type="number" id="visitors" name="visitors"><br>
+                <input type="submit" value="Submit">
+            </form>        
     </body>
 </html>

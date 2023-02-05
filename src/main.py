@@ -12,7 +12,7 @@ def home():
     if request.method == "POST":
         url = request.form.get("url")
         visitors = request.form.get("visitors")
-        return "The requested URL is: " + str(url) + "\n The CO2 emissions for the given site is: " + str(calculate(url, visitors)) + " kilograms"
+        return "The requested URL is: " + str(url) + "\n The emissions for the given site is: " + str(calculate(url, visitors)) + " kilograms of CO2 per month."
     return render_template("template.html")
 
 
