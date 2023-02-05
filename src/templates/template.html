@@ -16,6 +16,7 @@
         </style>
 
         <title>EcoWebsite</title>
+        
         <div class="header">
             <h><b>CO2 Emissions</b></h>
         </div>
@@ -24,14 +25,19 @@
             <a href="{{ url_for('about')}}">About Us</a>
         </nav>
     </head>
+ 
+ 
+    <body>
+        <form action="{{ url_for("get")}}" method="post">
+            <label for="url">Website URL:</label><br>
+            <input type="text" id="url" name="url"><br>
+            <input type="submit" value="Submit">
+           
+        </form>
+        <form action="About.html">
+            <input type="submit" value="See Your Waste!" />
+        </form>
+        
 
-    <body style="background-color:	#AFE1AF;">        
-            <form action="{{ url_for("home")}}" method="post">
-                <label for="url">Website URL:</label><br>
-                <input type="text" id="url" name="url"><br>
-                <label for="visitors">Monthly Number of Visitors</label><br>
-                <input type="number" id="visitors" name="visitors"><br>
-                <input type="submit" value="Submit">
-            </form>        
     </body>
 </html>
